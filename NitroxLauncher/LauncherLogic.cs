@@ -255,7 +255,7 @@ namespace NitroxLauncher
             // Start game & gaming platform if needed.
             using ProcessEx game = platform switch
             {
-                Steam s => await s.StartGameAsync(subnauticaExe, GameInfo.Subnautica.SteamAppId, subnauticaLaunchArguments),
+                Steam s => await s.StartGameAsync(subnauticaExe, subnauticaLaunchArguments),
                 EpicGames e => await e.StartGameAsync(subnauticaExe, subnauticaLaunchArguments),
                 MSStore m => await m.StartGameAsync(subnauticaExe),
                 DiscordStore d => await d.StartGameAsync(subnauticaExe, subnauticaLaunchArguments),
